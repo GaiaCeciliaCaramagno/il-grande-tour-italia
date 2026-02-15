@@ -1,0 +1,1628 @@
+/*  RESET DI BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+/* ---------------- HEADER---------------- */
+
+header{
+    max-width: 100%;
+    background-color:#115152;
+    display:flex;  /* dispone gli elementi orizzonatalmente  */
+    padding: 20px; /* aumenta spazio contenitore interno in tutte le direzioni, sopra e sotto */
+    justify-content: space-between;  /* dispone gli elementi con un spazio tra gli elementi  */
+    padding-inline: 90px; /* aggiunge spazio a sinistra e destra degli elementi */
+    align-items: center;
+}
+
+
+header p a {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    color: #ffffff;
+    text-decoration: none;  /*non fa vedere la selezionatura del link */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap:5%;  /* aggiunge spazio tra gli elementi  */
+}
+
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding-inline: 20px;
+    white-space: nowrap; /* non fa andare a capo un testo anche se c'è poco spazio, l'ho usato per non fare andare a capo la voce il grande tour del menu */
+}
+
+
+nav ul li a:hover {
+    color: #F1C432;  /* cambia colore */
+}
+
+
+nav ul li a.active {
+    color: #F1C432;         
+    text-decoration: underline;  /* sottolineatura */
+    text-underline-offset: 3px;    /* distanza tra testo e sottolineatura */
+    text-decoration-thickness: 2px; /* spessore della linea */
+    font-weight: 700;       /* opzionale, per farlo più evidente */
+}
+
+
+#menu-toggle {
+    display: none;  /* rende invisibile l'hamburger menu dalla versione desktop  */
+}
+
+
+
+
+
+
+
+
+
+/* INTRO ---------------------- HERO SECTION */
+
+.intro {
+max-width: 100%;
+}
+
+.intro-text{
+    position: absolute;
+    color: #ffffff;
+    z-index: 1;
+    top: 25%;
+    left: 10%;             /* spostato a destra */
+    max-width: 62%;      /* limite per andare a capo */
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1%; /* ho inserito i due padding left e bottom perché quando il pulsante si ingrandisce essendo che fuoriusciva dal contenitore mi creava lo scroll tagliandomi parte del pulsante, così facendo aggiungo spazio e non crea lo scroll */
+    padding-bottom:1%;
+}
+
+
+/* Titolo */
+.intro-text h1 {
+    font-size: 80px;
+    font-weight: 700; /* bold */
+}
+
+/* Parte colorata */
+.highlight {
+    color: #F1C432; 
+}
+
+
+/* Paragrafo */
+.intro-text p {
+    max-width: 80%;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 500; /* semibold */
+    line-height: 1.5; /* 1.5 volte l'altezza del font */
+}
+
+
+/* Bottone */
+.btn-scopri {
+    margin-top: 40px;
+    padding: 15px 35px;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #F1C432; 
+    color: #115152; 
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+/* Cambia colore al passaggio del mouse */
+.btn-scopri:hover {
+    background-color: #FFDB68; /* cambio colore */
+        transform: scale(1.05);        /* ingrandisce leggermente il pulsante */
+}
+
+
+.intro-image img {
+    position: relative;
+    height: 88vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(40%); /* 50% di luminosità → overlay scuro */
+    object-position: 50% 60%; /* stabilisco la posizione dell'immagine */
+}
+
+
+
+
+
+
+
+/* ---------------CONTENITORE--------------------*/
+
+.Contenitore {
+  max-width: 77%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* ----------SEZIONE PREVIEW-----------*/
+
+.preview-text {
+    text-align: center;
+    color: #0A2D2E;
+    max-width: 90%;
+    margin: 0 auto; 
+    padding-top: 16vh;
+    padding-bottom: 16vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.preview-text h2 {
+    padding-bottom:3%;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+
+.preview-text h3 {
+    padding-top: 3%;
+    padding-bottom:3%;
+    font-size: 26px;
+    font-weight: 400;
+    max-width: 78%;
+    margin: 0 auto; /* 0 toglie i margini, auto centra il testo orizzontalmente dentro il suo contenitore h3 */
+    line-height: 1.5;  
+}
+
+
+
+
+
+
+
+
+/*----------------SEZIONE COME USARE QUESTA GUIDA----------- */
+
+.guida { 
+   background-color:#EEF9F8; 
+   padding-top:16vh ;
+   padding-bottom:16vh ;
+}
+
+
+.guida-text h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    margin-bottom: 5%;
+    color: #0A2D2E;
+}
+
+
+.guida-text ul {
+    list-style-type: disc;      /* mostra i puntini */
+    list-style-position: inside; /* puntini dentro il padding del testo, verticalmente allineati */
+    padding-left: 0;             /* zero padding in modo che il marker sia vicino al testo */
+    margin-bottom: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    line-height: 3;
+    color: #0A2D2E;             
+}
+
+
+.guida-text ul li::marker {
+    color: #F1C432;              
+    font-size: 26px;              /* dimensione dei pallini */
+}
+
+
+
+
+
+
+
+
+
+/* ----------SEZIONE CITTà DEL TOUR- HOME----------*/
+
+.cittàtour-text {
+    text-align: center;
+    color: #0A2D2E;
+    max-width: 90%;
+    margin: 0 auto; 
+    padding-top: 16vh;
+    padding-bottom: 16vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.cittàtour-text h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+ 
+.cards-destinazioni {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-bottom: 16vh;
+}
+
+
+.card {
+    position: relative;
+    overflow: hidden; /* IMPORTANTISSIMO */
+}
+
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+    border-radius: 8px;
+    filter: brightness(65%); /* 65% di luminosità → overlay scuro */
+}
+
+
+.card:hover img {
+    
+    object-fit: cover;
+    filter: brightness(85%); 
+}
+
+
+/* 1) Nasconde l'immagine che esce fuori quando si ingrandisce */
+.card .image {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+
+/* 2) Transizione morbida */
+.card .image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+
+/* 3) Zoom quando passi il mouse sulla card */
+.card:hover .image img {
+  transform: scale(1.1);
+}
+
+
+.image img[src*="destinazione-roma.jpg"] {
+    object-position: 50% 100%;
+}
+
+
+.card .text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    inset: 0;              /* occupa tutta la card */
+    display: flex;
+    align-items: center;   /* centro verticale */
+    justify-content: center; /* centro orizzontale */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+ /*------------FOOTER-----------*/
+
+
+footer {
+    display: flex;              /* metti tutto in fila */
+    align-items: center;        /* allinea in verticale */
+    justify-content: space-between;  /* sinistra e destra agli estremi */
+    padding: 20px;
+    padding-inline: 90px;
+    background-color: #115152;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+}
+
+
+footer p, footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.footer-links a {
+    color: #ffffff;  
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #F1C432;    /* colore al passaggio del mouse */
+} 
+
+
+footer .footer-links a:first-child {
+    margin-right: 20px; 
+}
+
+footer .footer-links a:last-child {
+    margin-left: 20px; 
+}
+
+
+footer .social-link img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;  
+}
+
+
+
+/* Centratura copyright */
+footer .footer-copy {
+    text-align: center;
+    margin:0 auto; 
+}
+
+
+/*icone social*/
+
+.social-container {
+  display: flex;
+  justify-content: center; /* centra le icone */
+  gap: 16px;               /* spazio tra le icone */
+  margin-top: 12px;
+}
+
+.social-container .social-link img {
+  width: 35px;  /* dimensione icone */
+  height: 35px;
+}
+
+
+
+
+
+
+
+
+
+/* --- INTRO DI TUTTE LE PAGINE --- */
+
+
+/* --- Sezioni con immagini + overlay --- */
+section[class*="-intro"] {
+    position: relative;
+    width: 100%;
+    height: 14vh;       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Overlay generico */
+section[class*="-intro"] .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/* Immagine */
+section[class*="-intro"] img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+/* ho cambiato la posizione dell'immagine dove serviva all'interno dell'intro */
+
+.destinazioni-intro img {
+    object-position: center 80%;
+}
+
+.Bologna-Sapori-locali-image img {
+    object-position: 50% 90%;
+}
+
+.Roma-Cultura-e-storia-image img {
+    object-position: 50% 80%; 
+}
+
+.Roma-Attività-image img {
+    object-position: center 60%; 
+}
+
+
+
+/* Colori overlay per sezione */
+section[class*="destinazioni"] .overlay,
+section[class*="chi-siamo"] .overlay,
+section[class*="Il-grande-tour"] .overlay {
+    background-color: rgba(71, 118, 108, 0.9); 
+}
+
+
+section[class*="Bologna"] .overlay {
+    background-color: rgba(109, 71, 53, 0.9);
+}
+
+section[class*="Roma"] .overlay {
+    background-color: rgba(160, 130, 55, 0.9); 
+}
+
+section[class*="Firenze"] .overlay {
+    background-color: rgba(150, 90, 53, 0.9); 
+}
+
+section[class*="Napoli"] .overlay {
+    background-color: rgba(71, 108, 110, 0.9); 
+}
+
+
+/* --- Testo centrato sopra overlay --- */
+section[class*="-intro"] .destinazioni-text,
+section[class*="-intro"] .chi-siamo-text,
+section[class*="-intro"] .Il-grande-tour-text,
+section[class*="Bologna"] .Bologna-text,
+section[class*="Roma"] .Roma-text,
+section[class*="Napoli"] .Napoli-text,
+section[class*="Firenze"] .Firenze-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* sopra overlay */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    
+}
+
+
+section[class*="-intro"] .destinazioni-text h1,
+section[class*="-intro"] .chi-siamo-text h1,
+section[class*="-intro"] .Il-grande-tour-text h1,
+section[class*="Bologna"] .Bologna-text h1,
+section[class*="Roma"] .Roma-text h1,
+section[class*="Napoli"] .Napoli-text h1,
+section[class*="Firenze"] .Firenze-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+/* Contenitore testo centrato */
+section[class*="Attivita"] div[class*="text"], 
+section[class*="Cultura-e-storia"] div[class*="text"], 
+section[class*="Sapori-locali"] div[class*="text"] {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Titolo principale */
+section[class*="Attivita"] div[class*="text"] h1,
+section[class*="Cultura-e-storia"] div[class*="text"] h1,
+section[class*="Sapori-locali"] div[class*="text"] h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Sottotitolo */
+section[class*="Attivita"] div[class*="text"] h2,
+section[class*="Cultura-e-storia"] div[class*="text"] h2,
+section[class*="Sapori-locali"] div[class*="text"] h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 5px 0 0 0;
+    margin-bottom:1vh;
+}
+
+
+
+
+
+
+
+
+/*-------------------- PAGINA DESTINAZIONI--------------*/
+
+/* Contenitore principale delle card */
+.destinazioni {
+padding-top: 16vh;
+padding-bottom: 16vh;
+}
+
+/* Ogni singola card */
+.destinazioni-card {
+    
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.destinazioni-card:not(:first-child) {
+    margin-top: 2vh;  /* aggiunge spazio solo dopo la prima card */
+}
+
+
+/* L'immagine della card */
+.destinazioni-card .image img {
+    width: 100%;
+    height: 280px;       
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    filter:brightness(65%)
+}
+
+
+
+/* Per evitare che l'immagine ingrandita esca fuori */
+.destinazioni-card .image {
+  overflow: hidden;
+}
+
+
+
+/* Hover SOLO sulla singola card */
+.destinazioni-card:hover .image img {
+  transform: scale(1.1);
+  filter:brightness(85%)
+}
+
+
+
+/* Overlay nero semi-trasparente */
+.destinazioni-card .text {
+    position: absolute;
+    inset: 0;                  /* occupa tutta la card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* centra verticalmente */
+    align-items: center;        /* centra orizzontalmente */
+    text-align: center;
+    background: rgba(0,0,0,0.4); /* overlay */
+    color: white;
+    padding: 20px;
+}
+
+
+/* Titolo */
+.destinazioni-card .text h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 42px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+
+/* Paragrafo */
+.destinazioni-card .text p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 26px;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+/*----------- SEZIONI CULTURA E STORIA, ATTIVITà E SAPORI LOCALI------------  */
+
+
+/* Struttura base di TUTTI i paragrafi , valido anche per il grande tour e chi siamo*/
+
+section[class*="paragrafo"] {
+    padding-top: 16vh;
+    padding-bottom:16vh;
+}
+
+/* Contenitore interno */
+section[class*="paragrafo"] .Contenitore {
+    display: flex;
+    gap: 7vw;
+    padding:0;
+}
+
+
+
+/* Sfondo azzurrino per 2° e 4° */
+section[class*="Secondo-paragrafo"],
+section[class*="Quarto-paragrafo"] {
+    background-color: #EEF9F8;
+}
+
+
+/* PROPORZIONI NON 50/50 */
+section[class*="paragrafo"] .image {
+    flex: 40%;   /* immagine più stretta */
+}
+
+
+section[class*="paragrafo"] div[class*="paragrafo"] {
+    flex: 60%;   /* testo più largo */
+}
+
+
+/* Immagini tutte uguali */
+section[class*="paragrafo"] .image img {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    border-radius: 12px;
+
+}
+/* Immagini tutte uguali */
+section[class*="Primo-paragrafo"] .image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.image img[src*="R-Bernini-galleria-borghese.jpg"] {
+
+    object-position: center 20%;
+}
+
+
+.image img[src*="R-attività-panorami.jpg"] {
+   
+    object-position: center 100%;
+}
+
+.image img[src*="R-caffè.jpg"] {
+   
+    object-position: center 70%;
+}
+
+.image img[src*="n-museo-archeologico-nazionale.jpg"] {
+   
+   object-position: 70% 10%; /*se il valore è più alto lo sposta a sinistra, se è più basso a destra */
+}
+
+
+/* Titoli */
+section[class*="paragrafo"] h3 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    font-family: "Roboto", sans-serif;
+    color:#0A2D2E
+}
+
+/* Paragrafi */
+section[class*="paragrafo"] p {
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: "Open Sans", sans-serif;
+    color: #0A2D2E;
+}
+
+
+/* Liste e voci delle liste nelle sezioni paragrafo, funziona anche nella pagina il grande tour*/
+section[class*="paragrafo"] ul,
+section[class*="paragrafo"] ul li,
+section[class*="paragrafo"] ul li strong {
+    font-size: 16px;        
+    line-height: 1.7;       
+    font-family: "Open Sans", sans-serif; 
+    color:#0A2D2E
+}
+
+
+section[class*="paragrafo"] ul  {
+    list-style-type: disc;      /* mostra i puntini */
+    list-style-position: inside; /* puntini dentro il padding del testo, verticalmente allineati */
+    padding-left: 0;   
+}
+
+
+section[class*="paragrafo"] ul li::marker {
+  color: #F1C432;              /* puntini gialli */
+    font-size: 16px;              /* dimensione dei pallini */  
+}
+
+
+
+
+
+
+
+
+/* ---------------SEZIONE SCOPRI DI PIÙ------------*/
+
+/* CONTAINER PRINCIPALE */
+
+.Scopri-di-più {
+    padding-bottom:16vh; 
+    /* padding verticale e orizzontale relativo alla viewport */
+}
+
+.linea-Roma{
+    height:20px;
+     background-color: rgba(160, 130, 55, 0.4); 
+}
+
+.linea-Firenze{
+    height:20px;
+     background-color: rgba(150, 90, 53, 0.4); 
+}
+
+
+.linea-Bologna{
+    height:20px;
+     background-color: rgba(109, 71, 53, 0.4); 
+}
+
+.linea-Napoli{
+    height:20px;
+     background-color: rgba(71, 108, 110, 0.4); 
+}
+
+
+/* Titolo */
+.Text-scopri-di-più {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    align-items: left;   
+}
+
+
+.Contenitore-scopri {
+    max-width: 77%;
+    margin: 0 auto;          
+}
+
+
+.Text-scopri-di-più h3 {
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    color:#0A2D2E 
+}
+
+
+/* Contenitore delle card */
+.Scopri-di-più .Contenitore {
+    display: flex;
+    justify-content: center; /* centra le card */
+    gap: 5vw; /* spazio equo tra le card proporzionale alla viewport dello schermo*/
+}
+
+
+/* Link delle card */
+.Scopri-di-più a {
+    flex: 1; /* ogni card prende lo stesso spazio disponibile */
+    text-decoration: none;
+}
+
+
+/* CARD */
+.Card-1,
+.Card-2 {
+    background: #EEF9F8;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 420px;
+}
+
+/* Immagine principale della card */
+.Card-1 img:first-child,
+.Card-2 img:first-child {
+    height: 55%;
+    width: 55%;
+    object-fit: contain;
+    margin: auto;
+}
+
+
+.Card-text {
+    display: flex;
+    justify-content: space-between; /* testo a sinistra, freccia a destra */
+    align-items: center;
+    width: 100%;
+    padding: 0 3vw 2vh 3vw;
+    
+}
+
+
+/* Testo */
+.Card-text p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    color:#0A2D2E;
+}
+
+/* Freccia */
+.Card-text img {
+    width: 50px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+/* ---------PAGINA CITTA--------- */
+
+section[class*="Citta-cultura-e-storia"],
+section[class*="Citta-attivita"],
+section[class*="Citta-sapori-locali"] {
+    
+    padding-top: 16vh;
+    padding-bottom:16vh;
+}
+
+
+.Citta-cultura-e-storia .Contenitore,
+.Citta-attivita .Contenitore,
+.Citta-sapori-locali .Contenitore {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10vw;
+}
+
+.Citta-cultura-e-storia .image,
+.Citta-attivita .image,
+.Citta-sapori-locali .image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* centro orizzontale */
+    align-items: center;     /* centro verticale */
+    height:350px; /*inserito per mettere un limite massimo di altezza perchè alcune illustrazioni venivano enormi.*/
+}
+
+
+
+/* IMMAGINI */
+.Citta-cultura-e-storia img,
+.Citta-attivita img,
+.Citta-sapori-locali img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain
+}
+
+
+/* TESTO DESTRA */
+.Citta-cultura-e-storia .cultura-e-storia-text,
+.Citta-attivita .attivita-text,
+.Citta-sapori-locali .sapori-locali-text {
+    flex: 1;
+    padding-left: 1%; /* perchè quando clicco sul bottone si può ingrandire senza creare scroll */
+    padding-bottom: 1%;
+}
+
+
+.Citta-cultura-e-storia .cultura-e-storia-text h2,
+.Citta-attivita .attivita-text h2,
+.Citta-sapori-locali .sapori-locali-text h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    color: #0A2D2E;
+    margin-bottom: 32px;
+}
+
+
+.Citta-cultura-e-storia p,
+.Citta-attivita p,
+.Citta-sapori-locali p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: #0A2D2E;
+    line-height: 1.7;
+}
+
+
+/* Sfondo azzurrino solo attività */
+.Citta-attivita {
+    background-color: #EEF9F8;
+}
+
+
+
+
+
+
+
+/* ------------IL GRANDE TOUR E CHI SIAMO---------- */
+
+/* Contenitore interno */
+section[class*="1paragrafo"] .Contenitore,
+section[class*="2paragrafo"] .Contenitore,
+section[class*="3paragrafo"] .Contenitore {
+    display: flex;
+    gap: 7vw;
+    align-items: flex-start;  /* allinea tutto in alto */
+}
+
+
+/* Sfondo alternato */
+section[class*="2paragrafo"] {
+    background-color: #EEF9F8;
+}
+
+
+/* === 50% IMMAGINE === */
+section[class*="1paragrafo"] .image,
+section[class*="2paragrafo"] .image,
+section[class*="3paragrafo"] .image {
+    flex: 1;
+}
+
+
+/* === 50% TESTO === */
+section[class*="1paragrafo"] div[class*="paragrafo1"],
+section[class*="2paragrafo"] div[class*="paragrafo2"],
+section[class*="3paragrafo"] div[class*="paragrafo3"] {
+    flex: 1;
+}
+
+
+/* Immagini */
+section[class*="1paragrafo"] .image img,
+section[class*="2paragrafo"] .image img,
+section[class*="3paragrafo"] .image img {
+    width: 100%;
+    height: 380px; 
+    object-fit: cover;
+    border-radius: 12px;   
+}
+
+
+.image img[src*="missione.jpg"] {
+   object-position: 50% 90%; /*se il valore è più alto lo sposta a sinistra, se è più basso a destra */
+}
+
+
+/* Titoli */
+section[class*="1paragrafo"] h2 ,
+section[class*="2paragrafo"] h2,
+section[class*="3paragrafo"] h2 {
+    color:#0A2D2E;
+    font-size: 28px;
+    margin-bottom: 32px;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* Paragrafi */
+section[class*="1paragrafo"] p,
+section[class*="2paragrafo"] p,
+section[class*="3paragrafo"] p {
+    color: #0A2D2E;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------- */
+@media (max-width: 1246px){ 
+.intro-text {
+        top: 15%;
+        left: 5%;
+        max-width: 64%;
+    }
+
+     .intro-text h1 {
+        font-size: 64px;
+    }
+
+    .intro-text p {
+        font-size: 24px;
+    }
+}
+
+
+/*----- larghezza massima tablet - max width 1024----- */
+
+@media (max-width: 1024px){
+    
+    /* ------------HEADER------------- */
+
+    header {
+        padding-inline: 40px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+
+    nav ul li a {
+        font-size: 20px; 
+    }
+
+
+  /* Hamburger visibile */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 40px;          /* distanza dal bordo destro uguale al padding dell'header */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff; 
+    border-radius: 3px;
+  }
+
+
+  /* Menu nascosto di default */
+  nav ul {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #115152;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 2px solid #115152;
+    display: none;
+    z-index: 100;
+  }
+
+
+  /* Mostra il menu quando il checkbox è attivato */
+  #menu-toggle:checked ~ nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+
+
+
+
+
+
+
+    /* -----------HERO SECTION----------- */
+    .intro-text {
+        top: 15%;
+        left: 5%;
+        max-width: 70%;
+    }
+
+    .intro-text h1 {
+        font-size: 64px;
+    }
+
+    .intro-text p {
+        font-size: 24px;
+    }
+
+    .btn-scopri {
+        font-size: 24px;
+    }
+
+
+    .intro-image img {
+        height: 70vh;
+        object-position: 50% 50%;
+    }
+
+
+
+
+
+
+
+
+
+/*-----------INTRO PAGINE----------*/
+
+section[class*="-intro"] .destinazioni-text h1,
+section[class*="-intro"] .chi-siamo-text h1,
+section[class*="-intro"] .Il-grande-tour-text h1,
+section[class*="Bologna"] .Bologna-text h1,
+section[class*="Roma"] .Roma-text h1,
+section[class*="Napoli"] .Napoli-text h1,
+section[class*="Firenze"] .Firenze-text h1 {
+    font-size: 40px;
+}
+
+
+/* Titolo principale */
+section[class*="Attivita"] div[class*="text"] h1,
+section[class*="Cultura-e-storia"] div[class*="text"] h1,
+section[class*="Sapori-locali"] div[class*="text"] h1 {
+    font-size: 40px;
+}
+
+
+/* Sottotitolo */
+section[class*="Attivita"] div[class*="text"] h2,
+section[class*="Cultura-e-storia"] div[class*="text"] h2,
+section[class*="Sapori-locali"] div[class*="text"] h2 {
+    font-size: 32px;   
+}
+
+
+
+
+
+
+
+
+
+/*---------------CONTENITORE--------------*/
+    .Contenitore{
+        width:90%
+    }
+
+
+
+
+
+
+
+
+    /*----------------- SEZIONE PREVIEW--------------- */
+
+.preview-text {
+    padding-top: 12%;
+    padding-bottom:12%;
+    }
+
+    .preview-text h2 {
+        font-size: 30px;
+        max-width: 100%;
+    }
+
+
+    .preview-text h3 {
+        font-size: 24px;
+        max-width: 100%;
+    }
+
+
+   
+
+
+
+
+
+    /*------------------ GUIDA----------------- */
+
+   .guida {
+    padding-top: 12%;
+    padding-bottom:12%;
+    }
+
+    .guida-text h2 {
+        font-size: 30px;
+    }
+
+    .guida-text ul {
+        font-size: 24px;
+        line-height: 2.4;
+    }
+
+
+
+
+
+
+
+    /*-----CARDS DESTINAZIONI----- */
+   .cards-destinazioni {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-bottom: 12%;
+    }
+
+
+   .cittàtour-text{
+   padding-top: 12%;
+   padding-bottom:12%;
+   }
+
+
+   .cittàtour-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    }
+
+
+
+
+
+
+
+
+/*------------- FOOTER------------ */
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding-inline: 20px;
+        padding-block: 20px;
+        gap: 10px;
+    }
+
+    
+    footer .footer-links a {
+        margin: 0 10px;
+    }
+
+
+    footer .social-link img {
+     margin-left: 10px;
+    display: flex !important;     /* mantiene le icone in fila */
+    justify-content: center; /* centrato orizzontalmente */
+    gap: 10px;           /* spazio tra le icone */
+    }
+
+
+    .social-container .social-link img {
+     width: 45px;  /* dimensione icone */
+     height: 45px;
+    }
+
+
+    footer .footer-copy {
+        margin-top: 10px;
+    }
+
+
+    footer p, footer a {
+  
+    font-size: 20px;
+   }
+
+
+
+
+
+
+
+
+/*----------- PAGINA DESTINAZIONI------------  */
+
+.destinazioni{
+ padding-top: 12%;
+ padding-bottom:12%;
+}
+
+
+
+
+
+    /*----------- PAGINE SEZIONI CULTURA E STORIA, ATTIVITà E SAPORI LOCALI------------  */
+
+/* Struttura base di TUTTI i paragrafi , valido anche per il grande tour e chi siamo*/
+
+
+    section[class*="paragrafo"] {
+    padding-top: 12%;
+    padding-bottom:12%;
+     }
+
+
+    section[class*="paragrafo"] .Contenitore {
+        flex-direction: column;
+        gap:40px;
+    }
+
+
+    section[class*="paragrafo"] .image,
+    section[class*="paragrafo"] div[class*="paragrafo"] {
+        flex: 1 1 100%;
+    }
+
+
+    section[class*="paragrafo"] .image img {
+        height: auto;
+    }
+
+
+   /* Per il paragrafo 2 e 4 invertiamo ordine: immagine sopra testo */
+    section[class*="Secondo-paragrafo"] .image,
+    section[class*="Quarto-paragrafo"] .image {
+        order: -1;  /* l'immagine viene prima */
+    }
+
+    section[class*="Secondo-paragrafo"] div[class*="paragrafo"],
+    section[class*="Quarto-paragrafo"] div[class*="paragrafo"] {
+        order: 0;   /* testo sotto */
+    }
+
+    /* Immagini responsive */
+    section[class*="paragrafo"] .image img {
+        width: 100%;
+        height: auto;  /* altezza automatica per adattarsi */
+        margin-bottom:20px;
+    }
+
+
+    section[class*="paragrafo"] h3 {
+        font-size: 34px;
+    }
+
+    section[class*="paragrafo"] p,
+    section[class*="paragrafo"] ul,
+    section[class*="paragrafo"] ul li,
+    section[class*="paragrafo"] ul li strong,
+    section[class*="paragrafo"] ul li::marker{
+        font-size: 22px;
+        
+    }
+
+
+/* Immagini tutte uguali */
+section[class*="paragrafo"] .image img {
+    width: 100%;
+    height: 580px;
+}
+
+
+/* Immagini tutte uguali */
+section[class*="Primo-paragrafo"] .image img {
+    width: 100%;
+    height: 580px;
+}
+
+
+    /* SCOPRI DI PIÙ */
+    .Scopri-di-più .Contenitore {
+        flex-direction: column;
+    }
+
+    
+    .Contenitore-scopri {
+    width: 90%;  
+     }
+
+
+/* Titolo */
+.Text-scopri-di-più {
+    padding-top: 10%;
+    padding-bottom: 10%;
+     
+}
+
+.Scopri-di-più {
+    padding-bottom:12%; 
+    /* padding verticale e orizzontale relativo alla viewport */
+}
+
+
+.Text-scopri-di-più h3 {
+    font-size: 34px; 
+}
+
+
+    .Card-text p {
+        font-size: 30px;
+    }
+
+
+    /* Freccia */
+   .Card-text img {
+    width: 60px;
+} 
+
+
+
+
+
+
+
+
+    /*--------------------- SEZIONI CITTA----------------- */
+   section[class*="Citta-cultura-e-storia"],
+   section[class*="Citta-attivita"],
+   section[class*="Citta-sapori-locali"] {
+    
+    padding-top: 12%;
+    padding-bottom:12%;
+    }
+
+
+    .Citta-cultura-e-storia .Contenitore,
+    .Citta-attivita .Contenitore,
+    .Citta-sapori-locali .Contenitore {
+        flex-direction: column;
+        
+    }
+
+
+    .Citta-cultura-e-storia .image,
+    .Citta-attivita .image,
+    .Citta-sapori-locali .image {
+        height: auto;
+    }
+
+
+    .Citta-cultura-e-storia img,
+    .Citta-attivita img,
+    .Citta-sapori-locali img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+    .Citta-cultura-e-storia .cultura-e-storia-text h2,
+    .Citta-attivita .attivita-text h2,
+    .Citta-sapori-locali .sapori-locali-text h2 {
+    font-size: 38px;
+    
+    
+   }
+
+    .Citta-cultura-e-storia p,
+    .Citta-attivita p,
+    .Citta-sapori-locali p {
+        font-size: 26px;
+    }
+
+
+
+
+
+
+
+
+/*-----------IL GRANDE TOUR E CHI SIAMO---------*/
+
+    /* Contenitore dei paragrafi: impila elementi verticalmente */
+    section[class*="1paragrafo"] .Contenitore,
+    section[class*="2paragrafo"] .Contenitore,
+    section[class*="3paragrafo"] .Contenitore {
+        flex-direction: column; /* immagine sopra testo */
+        
+    }
+
+    /* Ordine: immagine prima, testo sotto */
+    section[class*="1paragrafo"] .image,
+    section[class*="2paragrafo"] .image,
+    section[class*="3paragrafo"] .image {
+        order: -1;
+        width: 100%;
+        height: auto; /* altezza automatica */
+    }
+
+    section[class*="1paragrafo"] div[class*="paragrafo1"],
+    section[class*="2paragrafo"] div[class*="paragrafo2"],
+    section[class*="3paragrafo"] div[class*="paragrafo3"] {
+        order: 0;
+        
+    }
+
+    /* Immagini della stessa altezza */
+    section[class*="1paragrafo"] .image img,
+    section[class*="2paragrafo"] .image img,
+    section[class*="3paragrafo"] .image img {
+        width: 100%;
+        height: 580px;/* stessa altezza per tutte le immagini */
+    }
+
+    /* Titoli e paragrafi più leggibili su mobile */
+    section[class*="1paragrafo"] h2,
+    section[class*="2paragrafo"] h2,
+    section[class*="3paragrafo"] h2 {
+        font-size: 34px
+    }
+
+    section[class*="1paragrafo"] p,
+    section[class*="2paragrafo"] p,
+    section[class*="3paragrafo"] p {
+        font-size: 22;
+       
+    }
+}
+
+
+@media (max-width: 1435px) {
+    
+section[class*="1paragrafo"] .image img,
+section[class*="2paragrafo"] .image img,
+section[class*="3paragrafo"] .image img {
+    height: 400px; 
+}
+
+}
+
+
