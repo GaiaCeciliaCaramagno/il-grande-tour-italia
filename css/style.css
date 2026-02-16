@@ -45,7 +45,7 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
+    font-weight:500;
     font-size: 18px;
     padding-inline: 20px;
     white-space: nowrap; /* non fa andare a capo un testo anche se c'è poco spazio, l'ho usato per non fare andare a capo la voce il grande tour del menu */
@@ -62,7 +62,7 @@ nav ul li a.active {
     text-decoration: underline;  /* sottolineatura */
     text-underline-offset: 3px;    /* distanza tra testo e sottolineatura */
     text-decoration-thickness: 2px; /* spessore della linea */
-    font-weight: 700;       /* opzionale, per farlo più evidente */
+    font-weight: 500;       /* opzionale, per farlo più evidente */
 }
 
 
@@ -159,7 +159,7 @@ max-width: 100%;
 /* ---------------CONTENITORE--------------------*/
 
 .Contenitore {
-  max-width: 77%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -218,7 +218,7 @@ max-width: 100%;
 .guida-text h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 36px;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     color: #0A2D2E;
 }
 
@@ -230,7 +230,7 @@ max-width: 100%;
     margin-bottom: 30px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 24px;
-    line-height: 3;
+    line-height: 2;
     color: #0A2D2E;             
 }
 
@@ -567,7 +567,7 @@ section[class*="Attivita"] div[class*="text"] h2,
 section[class*="Cultura-e-storia"] div[class*="text"] h2,
 section[class*="Sapori-locali"] div[class*="text"] h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
     margin: 5px 0 0 0;
     margin-bottom:1vh;
 }
@@ -658,7 +658,7 @@ padding-bottom: 16vh;
     font-size: 26px;
     margin: 0;
     line-height: 1.4;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 
@@ -832,7 +832,7 @@ section[class*="paragrafo"] ul li::marker {
 
 
 .Contenitore-scopri {
-    max-width: 77%;
+    max-width: 1200px;
     margin: 0 auto;          
 }
 
@@ -880,8 +880,8 @@ section[class*="paragrafo"] ul li::marker {
 /* Immagine principale della card */
 .Card-1 img:first-child,
 .Card-2 img:first-child {
-    height: 55%;
-    width: 55%;
+    height: 50%;
+    width: 50%;
     object-fit: contain;
     margin: auto;
 }
@@ -945,7 +945,7 @@ section[class*="Citta-sapori-locali"] {
 .Citta-sapori-locali .image {
     flex: 1;
     display: flex;
-    justify-content: center; /* centro orizzontale */
+    justify-content: flex-start; /* centro orizzontale */
     align-items: center;     /* centro verticale */
     height:350px; /*inserito per mettere un limite massimo di altezza perchè alcune illustrazioni venivano enormi.*/
 }
@@ -956,8 +956,8 @@ section[class*="Citta-sapori-locali"] {
 .Citta-cultura-e-storia img,
 .Citta-attivita img,
 .Citta-sapori-locali img {
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 85%;
     object-fit:contain
 }
 
@@ -1173,7 +1173,7 @@ section[class*="3paragrafo"] p {
   }
 
   nav ul li a {
-    font-size: 20px;
+    font-size: 24px;
   }
 
 
@@ -1254,7 +1254,7 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 
 /*---------------CONTENITORE--------------*/
     .Contenitore{
-        width:90%
+        max-width: 800px;
     }
 
 
@@ -1477,7 +1477,7 @@ section[class*="Primo-paragrafo"] .image img {
 
     
     .Contenitore-scopri {
-    width: 90%;  
+    max-width: 800px;  
      }
 
 
