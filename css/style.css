@@ -82,6 +82,8 @@ nav ul li a.active {
 
 .intro {
 max-width: 100%;
+width: 100%;
+
 }
 
 .intro-text{
@@ -176,15 +178,15 @@ max-width: 100%;
     color: #0A2D2E;
     max-width: 90%;
     margin: 0 auto; 
-    padding-top: 16vh;
-    padding-bottom: 16vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
 .preview-text h2 {
     padding-bottom:3%;
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -192,7 +194,7 @@ max-width: 100%;
 .preview-text h3 {
     padding-top: 3%;
     padding-bottom:3%;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 400;
     max-width: 78%;
     margin: 0 auto; /* 0 toglie i margini, auto centra il testo orizzontalmente dentro il suo contenitore h3 */
@@ -210,8 +212,8 @@ max-width: 100%;
 
 .guida { 
    background-color:#EEF9F8; 
-   padding-top:16vh ;
-   padding-bottom:16vh ;
+   padding-top:15vh ;
+   padding-bottom:15vh ;
 }
 
 
@@ -237,7 +239,7 @@ max-width: 100%;
 
 .guida-text ul li::marker {
     color: #F1C432;              
-    font-size: 26px;              /* dimensione dei pallini */
+    font-size: 24px;              /* dimensione dei pallini */
 }
 
 
@@ -255,14 +257,14 @@ max-width: 100%;
     color: #0A2D2E;
     max-width: 90%;
     margin: 0 auto; 
-    padding-top: 16vh;
-    padding-bottom: 16vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
 .cittàtour-text h2 {
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 700;
 }
 
@@ -583,8 +585,8 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 
 /* Contenitore principale delle card */
 .destinazioni {
-padding-top: 16vh;
-padding-bottom: 16vh;
+padding-top: 15vh;
+padding-bottom: 15vh;
 }
 
 /* Ogni singola card */
@@ -675,8 +677,8 @@ padding-bottom: 16vh;
 /* Struttura base di TUTTI i paragrafi , valido anche per il grande tour e chi siamo*/
 
 section[class*="paragrafo"] {
-    padding-top: 16vh;
-    padding-bottom:16vh;
+    padding-top: 15vh;
+    padding-bottom:15vh;
 }
 
 /* Contenitore interno */
@@ -797,7 +799,7 @@ section[class*="paragrafo"] ul li::marker {
 /* CONTAINER PRINCIPALE */
 
 .Scopri-di-più {
-    padding-bottom:16vh; 
+    padding-bottom:15vh; 
     /* padding verticale e orizzontale relativo alla viewport */
 }
 
@@ -926,8 +928,8 @@ section[class*="Citta-cultura-e-storia"],
 section[class*="Citta-attivita"],
 section[class*="Citta-sapori-locali"] {
     
-    padding-top: 16vh;
-    padding-bottom:16vh;
+    padding-top: 15vh;
+    padding-bottom:15vh;
 }
 
 
@@ -1087,6 +1089,7 @@ section[class*="3paragrafo"] p {
 
 
 
+
 /* -------------- */
 @media (max-width: 1246px){ 
 .intro-text {
@@ -1105,20 +1108,36 @@ section[class*="3paragrafo"] p {
 }
 
 
-/*----- larghezza massima tablet - max width 1024----- */
 
-@media (max-width: 1024px){
-    
-    /* ------------HEADER------------- */
+
+/* VERSIONE TABLET */
+
+@media (max-width: 1024px){ 
+
+   .Contenitore{
+        max-width: 85%;
+    }
+
+     .Contenitore-scopri {
+    max-width: 85%;  
+     }
+
+/* ------------HEADER------------- */
 
     header {
         padding-inline: 40px;
     }
 
+    
+header p a {
+    
+    font-size: 22px;
+  
+}
 
     nav ul {
         flex-direction: column;
-        gap: 30px;
+        gap: 10px;
         width: 100%;
     }
 
@@ -1173,7 +1192,90 @@ section[class*="3paragrafo"] p {
   }
 
   nav ul li a {
-    font-size: 26px;
+    font-size: 20px;
+  }
+
+}
+
+
+
+
+
+
+/*-----VERSIONE MOBILE- larghezza massima mobile - max width 768----- */
+
+@media (max-width: 768px){
+    
+    /* ------------HEADER------------- */
+
+    header {
+        padding-inline: 40px;
+    }
+
+    
+header p a {
+    
+    font-size: 22px;
+}
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+
+    nav ul li a {
+        font-size: 20px; 
+    }
+
+
+  /* Hamburger visibile */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 40px;          /* distanza dal bordo destro uguale al padding dell'header */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff; 
+    border-radius: 3px;
+  }
+
+
+  /* Menu nascosto di default */
+  nav ul {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #115152;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 2px solid #115152;
+    display: none;
+    z-index: 100;
+  }
+
+
+  /* Mostra il menu quando il checkbox è attivato */
+  #menu-toggle:checked ~ nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
   }
 
 
@@ -1187,19 +1289,19 @@ section[class*="3paragrafo"] p {
     .intro-text {
         top: 15%;
         left: 5%;
-        max-width: 70%;
+        max-width: 90%;
     }
 
     .intro-text h1 {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     .intro-text p {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .btn-scopri {
-        font-size: 24px;
+        font-size: 20px;
     }
 
 
@@ -1225,7 +1327,7 @@ section[class*="Bologna"] .Bologna-text h1,
 section[class*="Roma"] .Roma-text h1,
 section[class*="Napoli"] .Napoli-text h1,
 section[class*="Firenze"] .Firenze-text h1 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 
@@ -1233,7 +1335,7 @@ section[class*="Firenze"] .Firenze-text h1 {
 section[class*="Attivita"] div[class*="text"] h1,
 section[class*="Cultura-e-storia"] div[class*="text"] h1,
 section[class*="Sapori-locali"] div[class*="text"] h1 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 
@@ -1241,7 +1343,7 @@ section[class*="Sapori-locali"] div[class*="text"] h1 {
 section[class*="Attivita"] div[class*="text"] h2,
 section[class*="Cultura-e-storia"] div[class*="text"] h2,
 section[class*="Sapori-locali"] div[class*="text"] h2 {
-    font-size: 32px;   
+    font-size: 24px;   
 }
 
 
@@ -1254,7 +1356,8 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 
 /*---------------CONTENITORE--------------*/
     .Contenitore{
-        max-width: 800px;
+        max-width: 85%;
+        
     }
 
 
@@ -1272,13 +1375,13 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
     }
 
     .preview-text h2 {
-        font-size: 30px;
+        font-size: 26px;
         max-width: 100%;
     }
 
 
     .preview-text h3 {
-        font-size: 24px;
+        font-size: 18px;
         max-width: 100%;
     }
 
@@ -1297,12 +1400,12 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
     }
 
     .guida-text h2 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .guida-text ul {
-        font-size: 24px;
-        line-height: 2.4;
+        font-size: 18px;
+        line-height: 1.8;
     }
 
 
@@ -1326,12 +1429,15 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 
 
    .cittàtour-text h2 {
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 700;
     }
 
 
-
+.card .text {
+     font-size: 20px;
+   
+}
 
 
 
@@ -1362,8 +1468,8 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 
 
     .social-container .social-link img {
-     width: 45px;  /* dimensione icone */
-     height: 45px;
+     width: 35px;  /* dimensione icone */
+     height: 35px;
     }
 
 
@@ -1374,7 +1480,7 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 
     footer p, footer a {
   
-    font-size: 20px;
+    font-size: 15px;
    }
 
 
@@ -1392,6 +1498,19 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 }
 
 
+/* Titolo */
+.destinazioni-card .text h2 {
+    font-size: 30px;
+  
+}
+
+
+/* Paragrafo */
+.destinazioni-card .text p {
+    font-size: 24px;
+
+}
+
 
 
 
@@ -1408,7 +1527,7 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 
     section[class*="paragrafo"] .Contenitore {
         flex-direction: column;
-        gap:40px;
+        gap:20px;
     }
 
 
@@ -1443,7 +1562,8 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 
 
     section[class*="paragrafo"] h3 {
-        font-size: 34px;
+        font-size: 26px;
+        margin-bottom: 20px;
     }
 
     section[class*="paragrafo"] p,
@@ -1451,7 +1571,7 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
     section[class*="paragrafo"] ul li,
     section[class*="paragrafo"] ul li strong,
     section[class*="paragrafo"] ul li::marker{
-        font-size: 22px;
+        font-size: 18px;
         
     }
 
@@ -1459,14 +1579,14 @@ section[class*="Sapori-locali"] div[class*="text"] h2 {
 /* Immagini tutte uguali */
 section[class*="paragrafo"] .image img {
     width: 100%;
-    height: 580px;
+    height: 400px;
 }
 
 
 /* Immagini tutte uguali */
 section[class*="Primo-paragrafo"] .image img {
     width: 100%;
-    height: 580px;
+    height: 400px;
 }
 
 
@@ -1477,7 +1597,7 @@ section[class*="Primo-paragrafo"] .image img {
 
     
     .Contenitore-scopri {
-    max-width: 800px;  
+    max-width: 85%;  
      }
 
 
@@ -1495,18 +1615,28 @@ section[class*="Primo-paragrafo"] .image img {
 
 
 .Text-scopri-di-più h3 {
-    font-size: 34px; 
+    font-size: 26px; 
 }
 
 
+/* CARD */
+.Card-1,
+.Card-2 {
+   
+    height: 320px;
+    
+   
+
+}
+
     .Card-text p {
-        font-size: 30px;
+        font-size: 24px;
     }
 
 
     /* Freccia */
    .Card-text img {
-    width: 60px;
+    width: 50px;
 } 
 
 
@@ -1546,13 +1676,14 @@ section[class*="Primo-paragrafo"] .image img {
     .Citta-sapori-locali img {
         width: 80%;
         margin: 0 auto;
+        margin-bottom: 20px;
     }
 
 
     .Citta-cultura-e-storia .cultura-e-storia-text h2,
     .Citta-attivita .attivita-text h2,
     .Citta-sapori-locali .sapori-locali-text h2 {
-    font-size: 38px;
+    font-size: 26px;
     
     
    }
@@ -1560,7 +1691,7 @@ section[class*="Primo-paragrafo"] .image img {
     .Citta-cultura-e-storia p,
     .Citta-attivita p,
     .Citta-sapori-locali p {
-        font-size: 26px;
+        font-size: 18px;
     }
 
 
@@ -1608,13 +1739,14 @@ section[class*="Primo-paragrafo"] .image img {
     section[class*="1paragrafo"] h2,
     section[class*="2paragrafo"] h2,
     section[class*="3paragrafo"] h2 {
-        font-size: 34px
+        font-size: 26px;
+        margin-bottom:20px;
     }
 
     section[class*="1paragrafo"] p,
     section[class*="2paragrafo"] p,
     section[class*="3paragrafo"] p {
-        font-size: 22;
+        font-size: 18px;
        
     }
 }
